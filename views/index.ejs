@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <section id="trivia" class="section-p1">
+        <h2><span>Trivia</span> game</h2><br>
+        <div class="buttonBox">
+            <a href="/scoreTable" class="button1">Tabla de puntuaciones</a>
+        </div>
+        <section id="player-data">
+            <div class="box">
+                <div class="square" style="--i:0;"></div>
+                <div class="square" style="--i:2;"></div>
+                <div class="square" style="--i:3;"></div>
+                <div class="square" style="--i:4;"></div>
+                <div class="container">
+                    <div class="form">
+                        <h2>Player</h2>
+                        <form action="" id="initial">
+                            <div class="inputBox">
+                                <input type="text" placeholder="Type Your name" id="player" autocomplete="off" >
+                            </div>
+                            <input type="button" value="Start" class="start" id="start" onclick="startGame()">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--PRIMER NIVEL-->
+        <section id="categ1" hidden="true">
+            <div class="box">
+                <div class="square" style="--i:0;"></div>
+                <div class="square" style="--i:2;"></div>
+                <div class="square" style="--i:3;"></div>
+                <div class="square" style="--i:4;"></div>
+                <div class="container">
+                    <div class="content-modal">
+                        <div class="content-score">
+                            <h4 id="score">Score: 0</h4>
+                            <h4 id="level">Level 1: C. General</h4><br/>
+                        </div>
+                        <h6 id="lvl1"></h6><br/>
+                        <form class="form-group">
+                            <div class="radio" id="rad1">
+                                <input type="radio" id="opt1" name="plc" value="">
+                                <label for="opt1" class="radio-label" id="place1">Resp1</label>
+                            </div><br/>
+                            <div class="radio" id="rad2">
+                                <input type="radio" id="opt2" name="plc"  value="">
+                                <label for="opt2" class="radio-label" id="place2">Resp2</label>
+                            </div><br/>
+                            <div class="radio" id="rad3">
+                                <input type="radio" id="opt3" name="plc" value="">
+                                <label for="opt3" class="radio-label" id="place3">Resp3</label>
+                            </div><br/>
+                            <div class="radio" id="rad4">
+                                <input type="radio" id="opt4" name="plc"  value="">
+                                <label for="opt4" class="radio-label" id="place4">Resp4</label>
+                            </div><br/>
+                            <input type="button" value="Surrender" class="cancel" id="cancel1">
+                            <input type="button" value="Check" class="check" id="check1">
+                            <input type="button" value="Next" class="start" id="next1">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--SEGUNDO NIVEL-->
+        <section id="categ2" hidden="true">
+            <div class="box">
+                <div class="square" style="--i:0;"></div>
+                <div class="square" style="--i:2;"></div>
+                <div class="square" style="--i:3;"></div>
+                <div class="square" style="--i:4;"></div>
+                <div class="container">
+                    <div class="content-modal">
+                        <div class="content-score">
+                            <h4 id="score2">Score: 0</h4>
+                            <h4 id="level">Level 2: Historia</h4><br/>
+                        </div>
+                        <h6 id="lvl2"></h6><br/>
+                        <form class="form-group">
+                            <div class="radio" id="rad5">
+                                <input type="radio" id="opt5" name="plc" value="">
+                                <label for="opt5" class="radio-label" id="place5">Resp1</label>
+                            </div><br/>
+                            <div class="radio" id="rad6">
+                                <input type="radio" id="opt6" name="plc"  value="">
+                                <label for="opt6" class="radio-label" id="place6">Resp2</label>
+                            </div><br/>
+                            <div class="radio" id="rad7">
+                                <input type="radio" id="opt7" name="plc" value="">
+                                <label for="opt7" class="radio-label" id="place7">Resp3</label>
+                            </div><br/>
+                            <div class="radio" id="rad8">
+                                <input type="radio" id="opt8" name="plc"  value="">
+                                <label for="opt8" class="radio-label" id="place8">Resp4</label>
+                            </div><br/>
+                            <input type="button" value="Surrender" class="cancel" id="cancel2">
+                            <input type="button" value="Check" class="check" id="check2">
+                            <input type="button" value="Next" class="start" id="next2">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--TERCER NIVEL-->
+        <section id="categ3" hidden="true">
+            <div class="box">
+                <div class="square" style="--i:0;"></div>
+                <div class="square" style="--i:2;"></div>
+                <div class="square" style="--i:3;"></div>
+                <div class="square" style="--i:4;"></div>
+                <div class="container">
+                    <div class="content-modal">
+                        <div class="content-score">
+                            <h4 id="score3">Score: 0</h4>
+                            <h4 id="level">Level 3: Deportes</h4><br/>
+                        </div>
+                        <h6 id="lvl3"></h6><br/>
+                        <form class="form-group">
+                            <div class="radio" id="rad9">
+                                <input type="radio" id="opt9" name="plc" value="">
+                                <label for="opt9" class="radio-label" id="place9">Resp1</label>
+                            </div><br/>
+                            <div class="radio" id="rad10">
+                                <input type="radio" id="opt10" name="plc"  value="">
+                                <label for="opt10" class="radio-label" id="place10">Resp2</label>
+                            </div><br/>
+                            <div class="radio" id="rad11">
+                                <input type="radio" id="opt11" name="plc" value="">
+                                <label for="opt11" class="radio-label" id="place11">Resp3</label>
+                            </div><br/>
+                            <div class="radio" id="rad12">
+                                <input type="radio" id="opt12" name="plc"  value="">
+                                <label for="opt12" class="radio-label" id="place12">Resp4</label>
+                            </div><br/>
+                            <input type="button" value="Surrender" class="cancel" id="cancel3">
+                            <input type="button" value="Check" class="check" id="check3">
+                            <input type="button" value="Next" class="start" id="next3">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--CUARTO NIVEL-->
+        <section id="categ4" hidden="true">
+            <div class="box">
+                <div class="square" style="--i:0;"></div>
+                <div class="square" style="--i:2;"></div>
+                <div class="square" style="--i:3;"></div>
+                <div class="square" style="--i:4;"></div>
+                <div class="container">
+                    <div class="content-modal">
+                        <div class="content-score">
+                            <h4 id="score4">Score: 0</h4>
+                            <h4 id="level">Level 4: Geografia</h4><br/>
+                        </div>
+                        <h6 id="lvl4"></h6><br/>
+                        <form class="form-group">
+                            <div class="radio" id="rad13">
+                                <input type="radio" id="opt13" name="plc" value="">
+                                <label for="opt13" class="radio-label" id="place13">Resp1</label>
+                            </div><br/>
+                            <div class="radio" id="rad14">
+                                <input type="radio" id="opt14" name="plc"  value="">
+                                <label for="opt14" class="radio-label" id="place14">Resp2</label>
+                            </div><br/>
+                            <div class="radio" id="rad15">
+                                <input type="radio" id="opt15" name="plc" value="">
+                                <label for="opt15" class="radio-label" id="place15">Resp3</label>
+                            </div><br/>
+                            <div class="radio" id="rad16">
+                                <input type="radio" id="opt16" name="plc"  value="">
+                                <label for="opt16" class="radio-label" id="place16">Resp4</label>
+                            </div><br/>
+                            <input type="button" value="Surrender" class="cancel" id="cancel4">
+                            <input type="button" value="Check" class="check" id="check4">
+                            <input type="button" value="Next" class="start" id="next4">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--QUINTO NIVEL-->
+        <section id="categ5" hidden="true">
+            <div class="box">
+                <div class="square" style="--i:0;"></div>
+                <div class="square" style="--i:2;"></div>
+                <div class="square" style="--i:3;"></div>
+                <div class="square" style="--i:4;"></div>
+                <div class="container">
+                    <div class="content-modal">
+                        <div class="content-score">
+                            <h4 id="score5">Score: 0</h4>
+                            <h4 id="level">Level 5: Ciencias</h4><br/>
+                        </div>
+                        <h6 id="lvl5"></h6><br/>
+                        <form class="form-group">
+                            <div class="radio" id="rad17">
+                                <input type="radio" id="opt17" name="plc" value="">
+                                <label for="opt17" class="radio-label" id="place17">Resp1</label>
+                            </div><br/>
+                            <div class="radio" id="rad18">
+                                <input type="radio" id="opt18" name="plc"  value="">
+                                <label for="opt18" class="radio-label" id="place18">Resp2</label>
+                            </div><br/>
+                            <div class="radio" id="rad19">
+                                <input type="radio" id="opt19" name="plc" value="">
+                                <label for="opt19" class="radio-label" id="place19">Resp3</label>
+                            </div><br/>
+                            <div class="radio" id="rad20">
+                                <input type="radio" id="opt20" name="plc"  value="">
+                                <label for="opt20" class="radio-label" id="place20">Resp4</label>
+                            </div><br/>
+                            <input type="button" value="Surrender" class="cancel" id="cancel5">
+                            <input type="button" value="Check" class="check" id="check5">
+                            <input type="button" value="Finish" class="start" id="next5">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/index.js"></script>
+</body>
+</html>
